@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà Trọ Mai Phú</title>
+    <link rel="stylesheet" href="/static/css/website.css">
+    <script src="/static/script/script.js"></script>
+</head>
+<body>
+    <header>
+       <div class="navbar">
+            <a href="{{ url_for('home') }}" class="nav-button">Trang Chủ</a>
+            <a href="#contact" class="nav-button">Liên Hệ</a>
+            <a href="{{ url_for('gioithieu') }}" class="nav-button">Giới Thiệu</a>
+            <a href="#" class="nav-button">Dịch Vụ</a>
+        </div>
+        <h1>Phòng Plus</h1>
+    </header>
+    <div class="gallery-container">
+    <figure>
+        <img src="/static/image/plus/p2.jpg" alt="Phòng Plus 1" onclick="openModal(this)">
+        <figcaption>Phòng rộng rãi, đầy đủ tiện nghi cao cấp</figcaption>
+    </figure>
+    <figure>
+        <img src="/static/image/plus/p3.jpg" alt="Phòng Plus 2" onclick="openModal(this)">
+        <figcaption>Phòng có giường lớn, khu vực làm việc riêng</figcaption>
+    </figure>
+    <figure>
+        <img src="/static/image/plus/p4.jpg" alt="Phòng Plus 3" onclick="openModal(this)">
+        <figcaption>Trang bị đầy đủ đồ dùng, sẵn sàng vào ở</figcaption>
+    </figure>
+    <figure>
+        <img src="/static/image/plus/p5.jpg" alt="Phòng Plus 4" onclick="openModal(this)">
+        <figcaption>Phòng có view đẹp, thoáng mát</figcaption>
+    </figure>
+</div>
+<div class="gallery-container">
+    <figure>
+        <img src="/static/image/plus/p6.jpg" alt="Phòng Plus 5" onclick="openModal(this)">
+        <figcaption>Phòng hiện đại, an ninh đảm bảo</figcaption>
+    </figure>
+    <figure>
+        <img src="/static/image/plus/p7.jpg" alt="Phòng Plus 6" onclick="openModal(this)">
+        <figcaption>Có bếp riêng, nội thất cao cấp</figcaption>
+    </figure>
+    <figure>
+        <img src="/static/image/plus/p8.jpg" alt="Phòng Plus 7" onclick="openModal(this)">
+        <figcaption>Phòng thoáng mát, đầy đủ ánh sáng tự nhiên</figcaption>
+    </figure>
+    <figure>
+        <img src="/static/image/plus/p9.jpg" alt="Phòng Plus 8" onclick="openModal(this)">
+        <figcaption>Phòng sang trọng, gần trung tâm</figcaption>
+    </figure>
+</div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>Nhà Trọ Mai Phú</strong></p>
+                <p>Địa chỉ: 583 Khu Y Tế Kỹ Thuật Cao, Phường An Lạc A, Quận Bình Tân, Tp HCM.</p>
+                <p>Số điện thoại: 0769 887 973</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=100048741698071&locale=vi_VN" target="_blank" class="social-icon">
+                    <img src="/static/image/gioithieu/fa.png" alt="Facebook">
+                </a>
+                <a href="https://chat.zalo.me/" target="_blank" class="social-icon">
+                    <img src="/static/image/gioithieu/za.png" alt="Zalo">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+                    <img src="/static/image/gioithieu/ins.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2024 Nhà Trọ Mai Phú. Bản quyền thuộc về Nhà Trọ Mai Phú.</p>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Lên đầu trang">&#8679;</button>
+</body>
+</html>

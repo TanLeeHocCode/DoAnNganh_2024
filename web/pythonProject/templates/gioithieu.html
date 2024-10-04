@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phòng Cơ Bản - Nhà Trọ Mai Phú</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gioithieu.css') }}">
+    <script src="{{ url_for('static', filename='script/script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="{{ url_for('home') }}" class="nav-button">Trang Chủ</a>
+            <a href="#contact" class="nav-button">Liên Hệ</a>
+            <a href="{{ url_for('gioithieu') }}" class="nav-button">Giới Thiệu</a>
+            <a href="#" class="nav-button">Dịch Vụ</a>
+        </div>
+        <h1>Giới Thiệu</h1>
+    </header>
+
+    <div class="gallery-container">
+        <figure>
+            <img src="{{ url_for('static', filename='image/gioithieu/g1.jpg') }}" alt="Nhà trọ Mai Phú 1" onclick="openModal(this)">
+            <figcaption>Nhà trọ Mai Phú 1</figcaption>
+        </figure>
+        <figure class="text-figure">
+            Nhà trọ Mai Phú được thành lập năm 2020 với mục tiêu cung cấp chỗ ở an toàn và tiện nghi cho mọi người.
+        </figure>
+    </div>
+
+    <div class="gallery-container">
+        <figure class="text-figure">
+            Nhà trọ Mai Phú được thành lập năm 2020 với mục tiêu cung cấp chỗ ở an toàn và tiện nghi cho mọi người.
+        </figure>
+        <figure>
+            <img src="{{ url_for('static', filename='image/gioithieu/g2.jpg') }}" alt="Nhà trọ Mai Phú 2" onclick="openModal(this)">
+            <figcaption>Nhà trọ Mai Phú 2</figcaption>
+        </figure>
+    </div>
+
+    <div class="gallery-container">
+        <figure>
+            <img src="{{ url_for('static', filename='image/gioithieu/g3.jpg') }}" alt="Nhà trọ Mai Phú 3" onclick="openModal(this)">
+            <figcaption>Nhà trọ Mai Phú 3</figcaption>
+        </figure>
+        <figure class="text-figure">
+            Chúng tôi luôn cải thiện không ngừng nghỉ từ chất lượng phục vụ đến các trang thiết bị tốt nhất.
+        </figure>
+    </div>
+
+    <div class="gallery-container">
+        <figure class="text-figure">
+            Đáp ứng mọi nhu cầu của khách hàng với rất nhiều loại phòng khác nhau.
+        </figure>
+        <figure>
+            <img src="{{ url_for('static', filename='image/gioithieu/g4.jpg') }}" alt="Nhà trọ Mai Phú 4" onclick="openModal(this)">
+            <figcaption>Nhà trọ Mai Phú 4</figcaption>
+        </figure>
+    </div>
+
+    <div class="gallery-container">
+        <figure>
+            <img src="{{ url_for('static', filename='image/gioithieu/g5.jpg') }}" alt="Nhà trọ Mai Phú 5" onclick="openModal(this)">
+            <figcaption>Nhà trọ Mai Phú 5</figcaption>
+        </figure>
+        <figure class="text-figure">
+            Giá thành luôn đi đôi với chất lượng và sự an toàn, an ninh.
+        </figure>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>Nhà Trọ Mai Phú</strong></p>
+                <p>Địa chỉ: 583 Khu Y Tế Kỹ Thuật Cao, Phường An Lạc A, Quận Bình Tân, Tp HCM.</p>
+                <p>Số điện thoại: 0769 887 973</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=100048741698071&locale=vi_VN" target="_blank" class="social-icon">
+                    <img src="{{ url_for('static', filename='image/gioithieu/fa.png') }}" alt="Facebook">
+                </a>
+                <a href="https://chat.zalo.me/" target="_blank" class="social-icon">
+                    <img src="{{ url_for('static', filename='image/gioithieu/za.png') }}" alt="Zalo">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+                    <img src="{{ url_for('static', filename='image/gioithieu/ins.png') }}" alt="Instagram">
+                </a>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2024 Nhà Trọ Mai Phú. Bản quyền thuộc về Nhà Trọ Mai Phú.</p>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Lên đầu trang">&#8679;</button>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà Trọ Mai Phú</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/website.css') }}">
+    <script src="{{ url_for('static', filename='script/script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="{{ url_for('home') }}" class="nav-button">Trang Chủ</a>
+            <a href="#contact" class="nav-button">Liên Hệ</a>
+            <a href="{{ url_for('gioithieu') }}" class="nav-button">Giới Thiệu</a>
+            <a href="#" class="nav-button">Dịch Vụ</a>
+        </div>
+        <h1>Phòng Cơ Bản</h1>
+    </header>
+
+    <div class="gallery-container">
+    <figure>
+        <img src="{{ url_for('static', filename='image/coban/c1.jpg') }}" alt="Phòng Cơ Bản 1" onclick="openModal(this)">
+        <figcaption>Phòng thoáng mát, đầy đủ tiện nghi</figcaption>
+    </figure>
+    <figure>
+        <img src="{{ url_for('static', filename='image/coban/c3.jpg') }}" alt="Phòng Cơ Bản 2" onclick="openModal(this)">
+        <figcaption>Gần trung tâm, thuận tiện đi lại</figcaption>
+    </figure>
+    <figure>
+        <img src="{{ url_for('static', filename='image/coban/c4.jpg') }}" alt="Phòng Cơ Bản 3" onclick="openModal(this)">
+        <figcaption>Phòng mới, rộng rãi, có ban công</figcaption>
+    </figure>
+    <figure>
+        <img src="{{ url_for('static', filename='image/coban/c5.jpg') }}" alt="Phòng Cơ Bản 4" onclick="openModal(this)">
+        <figcaption>Phòng đầy đủ nội thất, chỉ cần vào ở</figcaption>
+    </figure>
+</div>
+<div class="gallery-container">
+    <figure>
+        <img src="{{ url_for('static', filename='image/coban/c6.jpg') }}" alt="Phòng Cơ Bản 5" onclick="openModal(this)">
+        <figcaption>Giá cả hợp lý, an ninh tốt</figcaption>
+    </figure>
+    <figure>
+        <img src="{{ url_for('static', filename='image/coban/c7.jpg') }}" alt="Phòng Cơ Bản 6" onclick="openModal(this)">
+        <figcaption>Gần chợ, siêu thị và khu vui chơi</figcaption>
+    </figure>
+    <figure>
+        <img src="{{ url_for('static', filename='image/coban/c8.jpg') }}" alt="Phòng Cơ Bản 7" onclick="openModal(this)">
+        <figcaption>Khu dân cư yên tĩnh, an toàn</figcaption>
+    </figure>
+    <figure>
+        <img src="{{ url_for('static', filename='image/coban/c9.jpg') }}" alt="Phòng Cơ Bản 8" onclick="openModal(this)">
+        <figcaption>Wifi tốc độ cao, phòng sạch sẽ</figcaption>
+    </figure>
+</div>
+
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>Nhà Trọ Mai Phú</strong></p>
+                <p>Địa chỉ: 583 Khu Y Tế Kỹ Thuật Cao, Phường An Lạc A, Quận Bình Tân, Tp HCM.</p>
+                <p>Số điện thoại: 0769 887 973</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=100048741698071&locale=vi_VN" target="_blank" class="social-icon">
+                    <img src="{{ url_for('static', filename='image/gioithieu/fa.png') }}" alt="Facebook">
+                </a>
+                <a href="https://chat.zalo.me/" target="_blank" class="social-icon">
+                    <img src="{{ url_for('static', filename='image/gioithieu/za.png') }}" alt="Zalo">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+                    <img src="{{ url_for('static', filename='image/gioithieu/ins.png') }}" alt="Instagram">
+                </a>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2024 Nhà Trọ Mai Phú. Bản quyền thuộc về Nhà Trọ Mai Phú.</p>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Lên đầu trang">&#8679;</button>
+</body>
+</html>
